@@ -18,7 +18,7 @@ int main(int argc,char* argv[]){
     atoiArgv(argv[3],tarIp);
 
     normalArp(mIp,mMac,senIp,argv[1]);
-    listenArp(argv[1], senIp, senMac);
+    listenArp(senIp, senMac, argv[1]);
     makeAttackArp(mMac, senMac, tarIp, senIp, &eth, &arp);
     attackArp(&eth, &arp,argv[1]);
 

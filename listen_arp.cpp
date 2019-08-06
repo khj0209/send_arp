@@ -15,7 +15,7 @@ int checkReply(struct arp_header arp,uint8_t* senIp){
     }
     else return -1;
 }
-void listenArp(char* argv,uint8_t* senIp, u_char* senMac){
+void listenArp(uint8_t* senIp, u_char* senMac, char* argv){
     char* dev = argv;
     char errbuf[PCAP_ERRBUF_SIZE];
     pcap_t* handle = pcap_open_live(dev, BUFSIZ, 1, 1000, errbuf);
